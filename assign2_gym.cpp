@@ -21,7 +21,7 @@ public:
 	
 	///Constructor for GymMachine, takes both power and size parameters
 	GymMachine(int power, int area){
-		cout << "In GymMachine Constructor! \n";
+		//cout << "In GymMachine Constructor! \n";
 		size = area;
 		powerConsumption = power;
 	};
@@ -53,18 +53,18 @@ public:
 	///Constructor for RowingMachine, since it inherits from GymMachine it passes in default values of 25 and 7 for power and size to the super class constructor
 	RowingMachine(int resist): GymMachine(25, 7)
 	{
-		cout << "In Rowing Machine Constructor! \n";
+		//cout << "In Rowing Machine Constructor! \n";
 		resistance = resist;
 	}
 
 	///Copy Constructor for RowingMachine, calls the copy constructor of GymMachine to complete the copy
 	RowingMachine(const RowingMachine* other): GymMachine(other){
-		cout << "In Rowing Machine copy constructor \n";
+		//cout << "In Rowing Machine copy constructor \n";
 	}
 
 	///Clone function used as part of Prototype design pattern, returns a new RowingMachine based off the prototype 'row'
 	RowingMachine* clone(int resist){
-		cout << "In Rowing Machine clone \n";
+		//cout << "In Rowing Machine clone \n";
 		return new RowingMachine(this);
 	}
 };
@@ -88,18 +88,18 @@ public:
 	///Constructor for Treadmill, since it inherits from GymMachine it passes in default values of 10 and 5 for power and size to the super class constructor	
 	Treadmill(int speed) : GymMachine(10, 5)
 	{
-		cout << "In Treadmill Constructor! \n";
+		//cout << "In Treadmill Constructor! \n";
 		maxSpeed = speed;
 	}
 
 	///Copy Constructor for Treadmill, uses copy constructor of GymMachine
 	Treadmill(const Treadmill* other): GymMachine(other){
-		cout << "In Treadmill copy constructor \n";
+		//cout << "In Treadmill copy constructor \n";
 	}
 
 	///clone function used in Prototype design pattern, creates new Treadmill from prototype 'tread'
 	Treadmill* clone(int speed){
-		cout << "In Treadmill clone \n";
+		//cout << "In Treadmill clone \n";
 		return new Treadmill(this);
 	}
 
